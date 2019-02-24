@@ -1,0 +1,54 @@
+{{> header}}
+   <!-- Добавьте необходимые классы для стилизации согласно макету.
+    Добавьте placeholder для input, если это необходимо.
+    Порядок элементов в разметке менять нельзя. -->
+    <div class="page__req">
+      <div class="req">
+        <h3 class="h3">Реквизиты карты</h3>
+        <form id="form">
+          <div>
+            <label for="card-number">Номер карты</label>
+            <div>
+              <input
+                type="text"
+                id="card-number"
+                name="card-number"
+                value="">
+               <!-- Тултипы необходимы для вывода ошибок валидации. Стили для них уже есть.
+              Вам нужно будет только разместить их рядом с нужным элементом-->
+              <div class="tooltip _hidden" data-id="card-number"></div>
+            </div>
+          </div>
+          <div>
+            <label for="card-date">Срок действия</label>
+            <div class="input-field__wrapper">
+              <input type="text"
+                id="card-month"
+                name="card-month"
+                value="">
+              <span class="separator">/</span>
+              <input
+                type="text"
+                id="card-year"
+                name="card-year"
+                value="">
+              <div class="tooltip _hidden" data-id="card-date"></div>
+            </div>
+          </div>
+          <div>
+            <label for="card-cvv">CVV</label>
+            <div>
+              <input
+                type="text"
+                id="card-cvv"
+                name="card-cvv"
+                value="">
+              <div class="tooltip _hidden" data-id="card-cvv"></div>
+            </div>
+          </div>
+          <input type="submit" class="btn" id="send-btn" value="Сохранить">
+        </form>
+      </div>
+    </div>
+   <!-- Для дальнейшей работы необходимо подключить файл card-requisities.js -->
+{{> footer}}
